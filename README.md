@@ -1,11 +1,41 @@
-# App Engine Standard Flask Hello World
+# README
 
-This sample shows how to use [Flask](http://flask.pocoo.org/) with Google App
-Engine Standard.
+This sample Python Flask app to run on Google App Engine SE. The application
+exposes an endpoint to generate random hashes for the purpose of testing an
+automated test framework.
 
-Before running or deploying this application, install the dependencies using
-[pip](http://pip.readthedocs.io/en/stable/):
+## Installation
 
-    pip install -t lib -r requirements.txt
+#### AppEngine
 
-For more information, see the [App Engine Standard README](../../README.md)
+You will need to get the google cloud SDK installed on your system. Follow the guide at https://cloud.google.com/sdk/downloads.
+
+#### Appengine Components
+
+```
+gcloud components install app-engine-python
+```
+
+#### Lib Requirements
+
+```
+pip install -t lib -r requirements.txt
+```
+
+## Running on localhost
+
+```
+dev_appserver.py app.yaml
+```
+
+### Hosted version can be found at:
+
+```
+https://secure-random.appspot.com/
+```
+
+and example output:
+
+```
+https://secure-random.appspot.com/generate/strings?num_strings=50
+```
